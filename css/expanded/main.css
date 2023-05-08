@@ -1,0 +1,671 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,500&display=swap");
+*,
+*:before *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e5e5e5;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+a:after {
+  content: "";
+  position: absolute;
+  background-color: #fec62d;
+  height: 5px;
+  border-radius: 5px;
+  width: 0;
+  left: 0;
+  text-align: center;
+  bottom: -10px;
+}
+
+a:hover:after {
+  width: 100%;
+  transition: 0.5s;
+}
+
+.container {
+  margin: auto;
+  max-width: 1300px;
+  padding: 0 20px;
+}
+
+header nav {
+  padding: 20px 0;
+}
+header nav .nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav .nav-wrap span {
+  display: none;
+}
+header nav .nav-wrap .nav-logo {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+header nav .nav-wrap .nav-logo p {
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 52px;
+  color: #58a9a5;
+}
+header nav .nav-wrap .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(104, 104, 104);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+header nav .nav-wrap .sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+header nav .nav-wrap .sidenav a:hover {
+  color: #f1f1f1;
+}
+header nav .nav-wrap .sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  header nav .nav-wrap .sidenav {
+    padding-top: 15px;
+  }
+  header nav .nav-wrap .sidenav a {
+    font-size: 18px;
+  }
+}
+header nav .nav-wrap .nav-item ul {
+  display: flex;
+  gap: 60px;
+  list-style-type: none;
+}
+header nav .nav-wrap .nav-item ul .nav-list {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 38px;
+}
+header nav .nav-wrap .nav-item ul .nav-list .nav-link {
+  color: #404242;
+}
+header nav .nav-wrap .nav-item ul .nav-list .nav-link:hover {
+  color: #58a9a5;
+  transition: 0.3s;
+}
+header nav .nav-wrap .nav-btn .btn-sign {
+  padding: 10px 50px;
+  background-color: #58a9a5;
+  border: 1px solid #e5e5e5;
+  border-radius: 15px;
+}
+header nav .nav-wrap .nav-btn .btn-sign p {
+  font-family: "Poppins";
+  font-weight: 500;
+  margin: 0;
+  font-size: 25px;
+  line-height: 38px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#home {
+  margin-top: 40px;
+  margin-bottom: 120px;
+}
+#home .home-container {
+  display: flex;
+}
+#home .home-left {
+  flex: 50%;
+  margin-top: 20px;
+  padding-right: 50px;
+}
+#home .home-left h2 {
+  font-family: "Poppins";
+  font-weight: 800;
+  margin-bottom: 2px;
+  font-size: 59px;
+  color: #1c2323;
+}
+#home .home-left p {
+  font-family: "Poppins";
+  font-weight: 400;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  font-size: 30px;
+  color: #404242;
+}
+#home .home-left .home-link {
+  background: #58a9a5;
+  border-radius: 20px 20px 20px 0px;
+  padding: 15px 50px;
+  font-family: "Poppins";
+  font-weight: 700;
+  margin-top: 20px;
+  width: 100px;
+  font-size: 25px;
+  line-height: 38px;
+}
+#home .home-left .home-link a {
+  color: #ffffff;
+}
+#home .home-right {
+  position: relative;
+  flex: 50%;
+  text-align: end;
+}
+#home .home-right img {
+  width: 100%;
+}
+#home .right-locate {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.hamburger {
+  display: none;
+}
+
+#Contact h2 {
+  text-align: center;
+  font-family: "Poppins";
+  margin: 10px;
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 105px;
+  text-align: center;
+  color: #1c2323;
+}
+#Contact p {
+  font-family: "Poppins";
+  margin: 10px;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: center;
+  color: #404242;
+}
+#Contact .contact-top {
+  display: flex;
+  margin-bottom: 150px;
+}
+#Contact .contact-top .contact-left img {
+  width: 100%;
+}
+#Contact .contact-top .contact-right {
+  position: relative;
+}
+#Contact .contact-top .contact-right img {
+  height: 282px;
+}
+#Contact .contact-top .contact-right .text {
+  font-family: "Poppins";
+  position: absolute;
+  font-weight: 500;
+  top: 35px;
+  text-align: left;
+  padding-left: 50px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #486958;
+}
+#Contact .contact-top .contact-right h5 {
+  font-family: "Poppins";
+  top: 160px;
+  padding-left: 60px;
+  position: absolute;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #486958;
+}
+#Contact .contact-bottom {
+  display: flex;
+}
+#Contact .contact-bottom .bottom-left {
+  width: 100%;
+  padding-right: 130px;
+}
+#Contact .contact-bottom .bottom-right {
+  margin-bottom: 150px;
+}
+#Contact .contact-bottom .bottom-right h4 {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  margin-bottom: 50px;
+  margin-top: 5px;
+  color: #1c2323;
+}
+#Contact .contact-bottom .bottom-right p {
+  font-family: "Poppins";
+  text-align: left;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 45px;
+  color: #486958;
+}
+
+#Location {
+  margin-bottom: 250px;
+}
+#Location h2 {
+  font-family: "Poppins";
+  margin-bottom: 5px;
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 105px;
+  text-align: center;
+  color: #1c2323;
+}
+#Location p {
+  font-family: "Poppins";
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: center;
+  color: #404242;
+}
+#Location .colors {
+  margin: 0 auto;
+  width: 90px;
+  margin-bottom: 5px;
+  height: 5px;
+  background-color: #58a9a5;
+  border-radius: 5px;
+}
+#Location .location-cards {
+  display: flex;
+  gap: 100px;
+  margin-top: 85px;
+}
+#Location .location-cards img {
+  width: 100%;
+}
+#Location .location-cards .livingroom-card h3 {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 35px;
+  text-align: left;
+  margin-bottom: 5px;
+  line-height: 60px;
+  color: #58a9a5;
+}
+#Location .location-cards .livingroom-card p {
+  font-family: "Poppins";
+  margin-bottom: 35px;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: left;
+  line-height: 30px;
+  color: #486958;
+}
+
+#About h2 {
+  font-family: "Poppins";
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-size: 70px;
+  line-height: 105px;
+  text-align: center;
+  color: #1c2323;
+}
+#About .testimonial-wrap {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  gap: 90px;
+}
+#About .testimonial-wrap img {
+  width: 100%;
+}
+#About .testimonial-report {
+  display: flex;
+}
+#About .testimonial-report .report-company {
+  padding: 50px;
+  background-color: #ccf0e6;
+}
+#About .testimonial-report .report-company p {
+  padding-left: 50px !important;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 45px;
+  color: #486958;
+}
+#About .testimonial-report .report-numbers {
+  display: flex;
+  gap: 80px;
+  padding-left: 50px;
+}
+#About .testimonial-report .report-numbers .number-one h2 {
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 105px;
+  color: #58a9a5;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+#About .testimonial-report .report-numbers .number-one p {
+  font-family: "Poppins";
+  text-align: left;
+  font-weight: 700;
+  margin-top: 2px;
+  width: 100%;
+  font-size: 20px;
+  line-height: 38px;
+  color: #58a9a5;
+}
+
+#Register {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+#Register .register-container {
+  display: flex;
+  gap: 80px;
+}
+#Register .register-container .register-contact h2 {
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 105px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align: left;
+  color: #1c2323;
+}
+#Register .register-container .register-contact p {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  line-height: 38px;
+  color: #486958;
+  margin-bottom: 20px;
+}
+#Register .register-container .register-contact .colors {
+  width: 90px;
+  margin-top: 5px;
+  height: 5px;
+  background-color: #58a9a5;
+  border-radius: 5px;
+}
+#Register .register-container .input-wrap {
+  border: 1px solid #486958;
+  width: 100%;
+}
+#Register .register-container .input-wrap .name {
+  width: 750px;
+  padding: 20px 30px;
+  background-color: #e5e5e5;
+}
+#Register .register-container .nav-btn .btn-sign {
+  padding: 15px 65px;
+  background-color: #58a9a5;
+  border: 1px solid #e5e5e5;
+  border-radius: 15px;
+}
+#Register .register-container .nav-btn .btn-sign span {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 38px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0 auto;
+  }
+  .home-container {
+    display: block !important;
+  }
+  .home-left {
+    margin-bottom: 30px;
+    padding-right: 0 !important;
+    width: 80%;
+    margin-left: auto;
+    text-align: center;
+  }
+  .home-left h2 {
+    font-size: 32px !important;
+    margin-bottom: 20px !important;
+  }
+  .home-left p {
+    font-size: 22px !important;
+    width: 100% !important;
+  }
+  .home-left .home-link {
+    padding: 10px 45px !important;
+    font-size: 22px !important;
+    margin: 0 auto;
+  }
+  .home-right {
+    display: none;
+  }
+  #Contact {
+    text-align: center;
+    padding-left: 50px;
+  }
+  #Contact .contact-container {
+    width: 100%;
+  }
+  #Contact h2 {
+    font-size: 36px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  #Contact p {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  #Contact .contact-top {
+    margin-bottom: 30px;
+  }
+  #Contact .contact-top .contact-left {
+    display: none;
+  }
+  #Contact .contact-top .contact-right {
+    margin: 0 auto;
+  }
+  #Contact .contact-top .contact-right img {
+    margin: 0 auto;
+    width: 100%;
+  }
+  #Contact .contact-top .contact-right p {
+    text-align: center !important;
+    padding-left: 20px !important;
+    padding-right: 20px;
+  }
+  #Contact .contact-top .contact-right h5 {
+    padding-left: 95px;
+    margin-top: 50px;
+  }
+  #Contact .contact-bottom {
+    width: 100%;
+  }
+  #Contact .contact-bottom .bottom-left {
+    display: none;
+  }
+  #Contact .contact-bottom .bottom-right {
+    margin-bottom: 30px;
+    width: 80%;
+  }
+  #Contact .contact-bottom .bottom-right h4 {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    padding-left: 62px;
+  }
+  #Contact .contact-bottom .bottom-right p {
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+    padding-left: 50px;
+  }
+  #Location {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  #Location h2 {
+    font-size: 36px;
+    line-height: 1.5;
+    padding-left: 50px;
+  }
+  #Location p {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    padding-left: 50px;
+  }
+  #Location .colors {
+    margin-left: 145px;
+  }
+  #Location .livingroom-card {
+    padding-left: 60px;
+  }
+  #Location .location-cards {
+    margin-top: 30px;
+    display: block;
+  }
+  #Location .location-cards h3 {
+    font-size: 28px !important;
+    margin-bottom: 5px !important;
+    text-align: center !important;
+  }
+  #Location .location-cards p {
+    font-size: 22px;
+    line-height: 2 !important;
+    margin-top: 0;
+    text-align: center !important;
+    padding-left: 20px;
+    margin-bottom: 20px !important;
+  }
+  #Location .location-cards .livingroom {
+    margin-bottom: 50px;
+  }
+  #About h2 {
+    font-size: 36px;
+    padding-left: 50px;
+  }
+  #About .testimonial-report {
+    position: relative;
+  }
+  #About .testimonial-wrap {
+    display: block;
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  #About .report-girl {
+    position: absolute;
+    display: none;
+    left: 0;
+  }
+  #About .report-numbers {
+    display: block !important;
+    padding-left: 0 !important;
+  }
+  #About .number-one {
+    margin: 0 auto;
+  }
+  #About .number-one h2 {
+    font-size: 36px !important;
+    margin-bottom: 0px !important;
+    padding-left: 10px;
+    line-height: 2 !important;
+  }
+  #About .number-one p {
+    text-align: center;
+    margin-top: 0 !important;
+    font-size: 10px;
+    line-height: 1.5 !important;
+    margin-bottom: 50px;
+  }
+  #About .report-company {
+    position: relative;
+  }
+  #About .report-company p {
+    font-size: 19px !important;
+    line-height: 1.5 !important;
+    text-align: center;
+  }
+  #Register .register-container {
+    display: block;
+  }
+  #Register .register-container h2 {
+    font-size: 36px !important;
+    padding-left: 70px;
+    line-height: 1 !important;
+  }
+  #Register .register-container p {
+    font-size: 22px !important;
+    margin-bottom: 50px !important;
+  }
+}
+@media (max-width: 1190px) {
+  .nav-item {
+    display: none;
+  }
+  .nav-wrap span {
+    display: block !important;
+  }
+  .hamburger {
+    background-color: transparent;
+    border: none;
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger img {
+    width: 40px;
+    height: 40px;
+  }
+  .nav-btn {
+    padding-left: 10px;
+    padding-right: 15px;
+  }
+  .nav-btn .btn-sign {
+    padding: 10px 45px !important;
+  }
+  .nav-btn .btn-sign p {
+    font-size: 23px !important;
+    line-height: 1.3 !important;
+    margin: 0;
+  }
+}
